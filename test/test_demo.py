@@ -10,4 +10,4 @@ class TestDemo(TestBase):
     def test_google_search(self):
         browser.open_url('https://www.google.com/')
         self.home_page.search('youtube')
-        assert 'str' in 'str'
+        assert 'str' == 'str', 'Error message'

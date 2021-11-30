@@ -1,13 +1,12 @@
-import unittest
 import pytest
 
 from main.selenium_core import browser
 
 
-class TestBase(unittest.TestCase):
+class TestBase:
 
-    @pytest.fixture(scope="session", autouse=True)
-    def setUp(self):
+    @pytest.fixture(autouse=True)
+    def set_up(self):
         browser.maximize_browser()
         browser.open_url('https://www.google.com/')
         yield
