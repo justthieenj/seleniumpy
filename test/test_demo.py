@@ -7,5 +7,7 @@ class TestDemo(TestBase):
     home_page = HomePage()
 
     def test_google_search(self):
-        self.home_page.search('youtube')
-        assert 'str' == 'str1', 'Error message'
+        _search_value = 'youtube'
+        self.home_page.search(_search_value)
+        _result = self.home_page.get_first_result()
+        assert _search_value in _result.lower(), f"First result should contains text '{_search_value}'"

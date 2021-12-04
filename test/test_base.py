@@ -4,11 +4,12 @@ from main.selenium_core import browser
 
 
 class TestBase:
+
     @pytest.fixture(autouse=True)
     def test_base(self):
         print("setup")
         browser.maximize_browser()
         browser.open_url("https://www.google.com/")
         yield
-        print("teardown")
+        print("\nteardown")
         browser.quit_browser()

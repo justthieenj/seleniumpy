@@ -16,3 +16,6 @@ class BaseControl:
 
     def enter(self, text):
         self.get_element().send_keys(text)
+
+    def get_text(self):
+        return self.get_element().text
