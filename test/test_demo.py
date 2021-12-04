@@ -1,3 +1,5 @@
+import pytest
+
 from main.pages.home_page import HomePage
 
 from test.test_base import TestBase
@@ -6,6 +8,7 @@ from test.test_base import TestBase
 class TestDemo(TestBase):
     home_page = HomePage()
 
+    @pytest.mark.testcase
     def test_google_search(self):
         _search_value = 'youtube'
         self.home_page.search(_search_value)
