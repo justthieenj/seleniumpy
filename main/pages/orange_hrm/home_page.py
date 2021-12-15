@@ -1,12 +1,8 @@
-from main.selenium_core.base_control import BaseControl
+from main.selenium_core.link import Link
 
 
 class HomePage:
-    __txt_username = BaseControl("#txtUsername")
-    __txt_password = BaseControl("#txtPassword")
-    __btn_login = BaseControl("#btnLogin")
+    __lnk_dashboard_menu = Link("//a[b[text()='%s']]")
 
-    def login(self, username, password):
-        self.__txt_username.enter(username)
-        self.__txt_password.enter(password)
-        self.__btn_login.click()
+    def navigate_dashboard(self, name):
+        self.__lnk_dashboard_menu.set_dynamic(name).click()
