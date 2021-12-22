@@ -9,3 +9,6 @@ class Link(BaseControl):
 
     def get_href(self):
         return self.get_element().get_attribute("href")
+
+    def set_dynamic(self, *items):
+        return Link(self._dynamic_locator % items)

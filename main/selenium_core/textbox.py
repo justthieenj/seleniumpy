@@ -9,3 +9,6 @@ class TextBox(BaseControl):
 
     def enter(self, text):
         self.get_element().send_keys(text)
+
+    def set_dynamic(self, *items):
+        return TextBox(self._dynamic_locator % items)

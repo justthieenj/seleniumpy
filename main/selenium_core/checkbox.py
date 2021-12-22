@@ -9,3 +9,6 @@ class CheckBox(BaseControl):
 
     def is_checked(self):
         return self.get_element().is_selected()
+
+    def set_dynamic(self, *items):
+        return CheckBox(self._dynamic_locator % items)
