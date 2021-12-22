@@ -5,7 +5,7 @@ from main.selenium_core.textbox import TextBox
 class LoginPage:
     __txt_username = TextBox("#txtUsername")
     __txt_password = TextBox("#txtPassword")
-    __btn_login = BaseControl("#btnLogin")
+    __btn_login = BaseControl("//button[text()='Login']")
 
     def login(self, username, password):
         self.__txt_username.enter(username)
