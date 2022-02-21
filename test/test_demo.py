@@ -24,3 +24,5 @@ class TestDemo(TestBase):
         print("\nActual value: " + cell_value)
 
         assert "Peter Anderson" == cell_value
+
+        print("\nTest Passed")
